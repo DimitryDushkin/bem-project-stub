@@ -1,0 +1,34 @@
+{
+  "name": "ydf",
+  "description": "BEM project",
+  "version": "0.0.0",
+  "author": {
+    "name": "Dmitry Dushkin",
+    "email": "dndushkin@yandex-team.ru"
+  },
+  "repository": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "borschik": "^1.5.0",
+    "borschik-tech-cleancss": "^2.0.1",
+    "bower": "^1.5.3",
+    "enb": "^1.1.0",
+    "enb-bem-techs": "^2.0.1",
+    "enb-bemxjst": "^2.0.2",
+    "enb-borschik": "^2.0.0",
+    "enb-diverse-js": "^0.1.0",
+    "enb-modules": "^0.2.0",
+    "enb-stylus": "^2.0.0",
+    "vow": "^0.4.11",
+    "vow-fs": "^0.3.4",
+    "ym": "^0.1.2"
+  },
+  "scripts": {
+    "start": "enb server",
+    "postinstall": "npm run deps",
+    "deps": "bower install"
+  },
+  "private": true
+}
