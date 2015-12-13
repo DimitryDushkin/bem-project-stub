@@ -1,5 +1,5 @@
 var enbBemTechs = require('enb-bem-techs'),
-    borschikTech = require('enb-borschik/techs/borschik'); 
+    borschikTech = require('enb-borschik/techs/borschik');
 
 module.exports = function (config) {
     var isProd = process.env.YENV === 'production';
@@ -12,13 +12,13 @@ module.exports = function (config) {
             [enbBemTechs.deps],
             [enbBemTechs.bemjsonToBemdecl],
             // node.js
-            [require('enb-diverse-js/techs/node-js'), { target: '?.pre.node.js' }],
+            [require('enb-js/techs/node-js'), { target: '?.pre.node.js' }],
             [require('enb-modules/techs/prepend-modules'), {
                 source: '?.pre.node.js',
                 target: '?.node.js'
             }],
             // browser.js
-            [require('enb-diverse-js/techs/browser-js'), { target: '?.browser.js' }],
+            [require('enb-js/techs/browser-js'), { target: '?.browser.js' }],
             [require('enb/techs/file-merge'), {
                 target: '?.pre.js',
                 sources: ['?.browser.bemhtml.js', '?.browser.js']
@@ -66,7 +66,7 @@ module.exports = function (config) {
             '?.min.bemhtml.js'
         ]);
     });
-    
+
     config.nodes('*desktop.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
