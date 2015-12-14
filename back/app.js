@@ -1,7 +1,7 @@
 var express = require('express'),
     app = express();
 
-app.use(express.static('../public'));
+app.use(express.static(__dirname + './../public'));
 
 global.BEMHTML = require('../front/desktop.bundles/index/index.bemhtml.js').BEMHTML;
 

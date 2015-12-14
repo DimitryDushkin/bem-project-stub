@@ -3,10 +3,10 @@ module.exports = function(content){
         block: 'page',
         title: 'Hello, World!',
         styles: [
-            { elem: 'css', url: 'index.min.css' }
+            { elem: 'css', url: '/desktop.bundles/index/index.css' }
         ],
         scripts: [
-            { elem: 'js', url: 'index.min.js' }
+            { elem: 'js', url: '/desktop.bundles/index/index.js' }
         ],
         content: [
             { block: 'header' },
