@@ -121,26 +121,11 @@ exports.deps = [
     },
     {
         "block": "button",
-        "mod": "theme",
-        "val": "islands"
-    },
-    {
-        "block": "button",
         "mod": "size"
     },
     {
         "block": "button",
-        "mod": "size",
-        "val": "m"
-    },
-    {
-        "block": "button",
         "mod": "type"
-    },
-    {
-        "block": "button",
-        "mod": "type",
-        "val": "link"
     },
     {
         "block": "page"
@@ -155,6 +140,11 @@ exports.deps = [
         "block": "loader",
         "mod": "type",
         "val": "js"
+    },
+    {
+        "block": "button",
+        "mod": "theme",
+        "val": "islands"
     },
     {
         "block": "button",
@@ -187,5 +177,15 @@ exports.deps = [
         "elem": "event",
         "mod": "type",
         "val": "pointerpressrelease"
+    },
+    {
+        "block": "button",
+        "mod": "size",
+        "val": "m"
+    },
+    {
+        "block": "button",
+        "mod": "type",
+        "val": "submit"
     }
 ];

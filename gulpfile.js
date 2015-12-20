@@ -26,14 +26,14 @@ gulp.task('nodemon', function (cb) {
 });
 
 gulp.task('enb', function() {
-    terminal.exec("enb make", {}, function(error,stdout,stderr){
+    terminal.exec('enb make', {}, function(error,stdout,stderr){
          browserSync.reload();
     });
 });
 
 gulp.task('watch', function() {
-    gulp.watch('front/**/*.styl', ['enb']);
-    gulp.watch('front/**/*.js', ['enb']);
+    gulp.watch('front/*.blocks/**/*.styl', ['enb']);
+    gulp.watch('front/*.blocks/**/*.js', ['enb']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

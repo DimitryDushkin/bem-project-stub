@@ -1970,29 +1970,6 @@ block('button').mod('focused', true).js()(function() {
 block('button').elem('text').tag()('span');
 
 /* end: /Users/dndushkin/programming/ydf/libs/bem-components/common.blocks/button/__text/button__text.bemhtml */
-/* begin: /Users/dndushkin/programming/ydf/libs/bem-components/common.blocks/button/_type/button_type_link.bemhtml */
-block('button').mod('type', 'link')(
-    tag()('a'),
-
-    attrs()(function() {
-        var ctx = this.ctx,
-            attrs = { role : 'link' };
-
-        ctx.target && (attrs.target = ctx.target);
-        this.mods.disabled?
-            attrs['aria-disabled'] = true :
-            attrs.href = ctx.url;
-
-        return this.extend(applyNext(), attrs);
-    }),
-
-    mod('disabled', true)
-        .js()(function() {
-            return this.extend(applyNext(), { url : this.ctx.url });
-        })
-);
-
-/* end: /Users/dndushkin/programming/ydf/libs/bem-components/common.blocks/button/_type/button_type_link.bemhtml */
 /* begin: /Users/dndushkin/programming/ydf/libs/bem-core/common.blocks/page/page.bemhtml */
 block('page')(
 

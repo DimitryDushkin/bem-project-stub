@@ -7,20 +7,20 @@ module.exports = function (config) {
     config.nodes('front/desktop.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
-            [require('enb/techs/file-provider'), { target: '?.bemjson.js' }],
+            [require('enb/techs/file-provider'), { target: '?.bemdecl.js' }],
             [enbBemTechs.files],
             [enbBemTechs.deps],
-            [enbBemTechs.bemjsonToBemdecl],
 
             // browser.js
             [require('enb-js/techs/browser-js'), {
-                target: '?.js',
+                target: '?.browser.js',
                 includeYM: true
             }],
             [require('enb/techs/file-merge'), {
-                target: '?.pre.js',
+                target: '?.js',
                 sources: ['?.bemhtml.js', '?.browser.js']
             }],
+
             // bemhtml
             [require('enb-bemxjst/techs/bemhtml'), {
                 devMode: process.env.BEMHTML_ENV === 'development',
@@ -35,7 +35,6 @@ module.exports = function (config) {
 
         nodeConfig.addTargets([
             '?.css',
-            // '?.node.js',
             '?.js',
             '?.bemhtml.js'
         ]);
@@ -56,6 +55,7 @@ module.exports = function (config) {
                     'front/desktop.blocks'
                 ]
             }],
+
             // css
             [require('enb-stylus/techs/stylus'), {
                 target: '?.css',
@@ -65,6 +65,7 @@ module.exports = function (config) {
             }]
         ]);
     });
+
     // config.nodes('*touch-pad.bundles/*', function (nodeConfig) {
     //     nodeConfig.addTechs([
     //         // essential
