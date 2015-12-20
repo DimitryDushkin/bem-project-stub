@@ -5,3 +5,7 @@ libs/
 .enb/tmp/
 *.bundles*/*/*.*
 !*.bundles*/*/*.bemjson.js
+
+.DS_Store
+tmp
+*.min.*

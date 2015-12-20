@@ -10,6 +10,11 @@ module.exports = function(content){
         ],
         content: [
             { block: 'header' },
+            {
+                block : 'button',
+                mods : { theme : 'islands', size : 'm', type : 'submit' },
+                text : 'Я отправляю данные'
+            },
             content
         ]
     };
